@@ -1,3 +1,24 @@
+-- Dap Config
+require('tools.dap')
+require('dapui').setup()
+
+local dap, dapui = require('dap'), require('dapui')
+
+-- Abrir interfaz cuando inicie debugging
+dap.listeners.after.event_initialized["dapui_config"] = function()
+  dapui.open()
+end
+
+-- Cerrar interfaz cuando termine debugging
+dap.listeners.before.event_terminated["dapui_config"] = function()
+  dapui.close()
+end
+
+dap.listeners.before.event_exited["dapui_config"] = function()
+  dapui.close()
+end 
+-- End Dap Config
+
 local fn = vim.fn
 
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
@@ -14,7 +35,6 @@ vim.cmd [[packadd packer.nvim]]  -- **Forzar carga packer**
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
-
   -- Yours plugins
   use 'alexandregv/norminette-vim'
   use { 'dracula/vim', as = 'dracula' }
