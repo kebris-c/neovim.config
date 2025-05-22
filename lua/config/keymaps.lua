@@ -1,3 +1,4 @@
+vim.g.mapleader = ','  -- coma como tecla líder
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 local dap = require('dap')
