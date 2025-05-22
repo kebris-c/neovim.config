@@ -1,7 +1,7 @@
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
-map('n', '<F12>', ':lua require("keymap_helper").show_keymaps()<CR>', opts)
+map('n', '<F12>', ':lua require("tools.keymap_helper").show_keymaps()<CR>', opts)
 map('n', '<F2>', ':NERDTreeToggle<CR>', opts)
 map('n', '<F3>', ':Stdheader<CR>', opts)
 map('n', '<F5>', ':Norminette<CR>', opts)
