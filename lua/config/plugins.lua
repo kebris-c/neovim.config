@@ -15,7 +15,7 @@ vim.cmd [[packadd packer.nvim]]  -- **Forzar carga packer**
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
-  -- Tus plugins aquí
+  -- Yours plugins
   use 'alexandregv/norminette-vim'
   use { 'dracula/vim', as = 'dracula' }
   use 'sainnhe/everforest'
@@ -23,6 +23,9 @@ return require('packer').startup(function(use)
   use 'vim-syntastic/syntastic'
   use 'preservim/nerdtree'
   use 'vim-airline/vim-airline'
+  use 'mfussenegger/nvim-dap'
+  use 'rcarriga/nvim-dap-ui'
+  use 'theHamsta/nvim-dap-virtual-text'
 
   if packer_bootstrap then
     require('packer').sync()
