@@ -117,4 +117,3 @@ mv ~/.zshrc.backup ~/.zshrc && source ~/.zshrc
 ---
 
 Happy editing, you terminal goblin. 🦑
-```
