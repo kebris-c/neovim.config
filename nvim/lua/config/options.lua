@@ -13,7 +13,7 @@ vim.o.smartindent = true   -- Context-aware indentation (AI before AI was cool)
 vim.o.tabstop = 4          -- Tab display width (4 spaces - the reasonable choice)
 vim.o.shiftwidth = 4       -- Indent width for auto-indent operations
 vim.o.softtabstop = 4      -- Backspace behavior for tab-like spaces
-vim.o.expandtab = true     -- Convert tabs to spaces (join the space master race)
+vim.o.expandtab = false     -- Convert tabs to spaces (join the space master race)
 
 -- ┌─────────────────────────────────────────────────────────────────────────────┐
 -- │ VISUAL ENHANCEMENTS - Making Things Pretty                                 │
